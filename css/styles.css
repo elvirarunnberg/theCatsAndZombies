@@ -1,0 +1,110 @@
+body {
+  background-color: black;
+  background-image: url('bakgrunden.jpg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  border: 3px solid rgb(7, 7, 7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  background-color: rgb(33, 32, 32);
+  height: 30px;
+}
+
+.katt{
+  background-color: rgb(79, 207, 118);
+}
+
+.zombie {
+  background-color: rgba(198, 63, 19, 0.836);
+}
+
+.current-player {
+  background-color: rgb(23, 86, 150);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  margin: 0 5px; 
+  padding: 8px 16px; 
+  font-size: 14px; 
+  background-color: #373a37;
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.button-container button:hover {
+  background-color: #546254; /* Ljusare grön ton när musen hovrar över knapparna för interaktivitet */
+}
+
+
+@keyframes ghostEffect {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+header {
+  font-size: 50px;
+  font-family: fantasy;
+  color: #781717;
+  animation: ghostEffect 2s infinite; 
+}
+
+#katt-counter {
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#katt-counter span {
+  font-weight: bold;
+}
+
+#katt-found {
+  color: green;
+}
+
+#katt-total {
+  color: red;
+}
+
+#bucket-list-message {
+color:white;
+font-size: 27px;
+font-style: italic;
+
+}
+
+.location-image {
+  border: 3px solid rgb(8, 8, 8); 
+  border-radius: 5px; 
+}
